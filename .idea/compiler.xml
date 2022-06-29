@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jvm" />
+        <module name="JavaProxy" />
+        <module name="stream_three" />
+        <module name="xxl-job" />
+        <module name="annotationDesc" />
+        <module name="JUC" />
+        <module name="applicationListen" />
+        <module name="two" />
+        <module name="RPCkuangjia" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xxl-job-admin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="JUC" options="-parameters" />
+      <module name="JavaProxy" options="-parameters" />
+      <module name="RPCkuangjia" options="-parameters" />
+      <module name="annotationDesc" options="-parameters" />
+      <module name="applicationListen" options="-parameters" />
+      <module name="jvm" options="-parameters" />
+      <module name="stream_three" options="-parameters" />
+      <module name="two" options="-parameters" />
+      <module name="xxl-job" options="-parameters" />
+    </option>
+  </component>
+</project>

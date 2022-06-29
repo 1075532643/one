@@ -1,0 +1,10 @@
+# Project exclude paths
+/annotationDesc/target/
+/applicationListen/target/
+/JavaProxy/target/
+/JUC/target/
+/jvm/target/
+/RPCkuangjia/target/
+/stream_three/target/
+/two/target/
+/xxl-job/target/

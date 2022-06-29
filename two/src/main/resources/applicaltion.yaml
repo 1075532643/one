@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        input:
+          mq_consume:
+            destination: orderTopic
