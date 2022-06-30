@@ -30,6 +30,7 @@ public class rpcClientProxy implements InvocationHandler {
                 .paramTypes(method.getParameterTypes())
                 .parameters(args)
                 .build();
+        System.out.println("进入poxyClient方法");
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(out);
         oos.writeObject(requestBody);

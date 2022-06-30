@@ -24,6 +24,7 @@
         <module>xxl-job</module>
         <module>RPCkuangjia</module>
         <module>JavaProxy</module>
+        <module>netty</module>
     </modules>
 
 

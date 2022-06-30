@@ -16,6 +16,7 @@
         <module name="applicationListen" />
         <module name="two" />
         <module name="RPCkuangjia" />
+        <module name="netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="annotationDesc" options="-parameters" />
       <module name="applicationListen" options="-parameters" />
       <module name="jvm" options="-parameters" />
+      <module name="netty" options="-parameters" />
       <module name="stream_three" options="-parameters" />
       <module name="two" options="-parameters" />
       <module name="xxl-job" options="-parameters" />
