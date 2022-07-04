@@ -21,10 +21,10 @@
         <module>jvm</module>
         <module>JUC</module>
         <module>applicationListen</module>
-        <module>xxl-job</module>
         <module>RPCkuangjia</module>
         <module>JavaProxy</module>
         <module>netty</module>
+        <module>aopT</module>
     </modules>
 
 

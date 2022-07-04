@@ -17,6 +17,7 @@
         <module name="two" />
         <module name="RPCkuangjia" />
         <module name="netty" />
+        <module name="aopT" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +30,7 @@
       <module name="JavaProxy" options="-parameters" />
       <module name="RPCkuangjia" options="-parameters" />
       <module name="annotationDesc" options="-parameters" />
+      <module name="aopT" options="-parameters" />
       <module name="applicationListen" options="-parameters" />
       <module name="jvm" options="-parameters" />
       <module name="netty" options="-parameters" />

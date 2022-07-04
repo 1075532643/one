@@ -1,4 +1,4 @@
-package com.ag.annoationSt.annatation.annotationStudy;
+package com.ag.annoationSt.annatation.annotationStudy.inter;
 
 import lombok.Data;
 

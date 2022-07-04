@@ -12,14 +12,12 @@ public class serverHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf)msg;
         System.out.println("收到客户端："+ctx.channel().remoteAddress()+"发送的消息"+byteBuf.toString(CharsetUtil.UTF_8));
-        super.channelRead(ctx, msg);
-
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.writeAndFlush(Unpooled.copiedBuffer("服务端 copy that!!",CharsetUtil.UTF_8));
-        super.channelReadComplete(ctx);
+       // super.channelReadComplete(ctx);
     }
 
     @Override

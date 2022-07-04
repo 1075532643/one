@@ -1,7 +1,8 @@
-package com.ag.annoationSt.annatation;
+package com.ag.annoationSt.annatation.controllerTest;
 
-import com.ag.annoationSt.annatation.annotationStudy.afterTest;
-import com.ag.annoationSt.annatation.annotationStudy.beforeTest;
+import com.ag.annoationSt.annatation.MyTest;
+import com.ag.annoationSt.annatation.annotationStudy.inter.afterTest;
+import com.ag.annoationSt.annatation.annotationStudy.inter.beforeTest;
 import com.ag.annoationSt.annatation.annotationStudy.classTest;
 
 import java.lang.reflect.InvocationTargetException;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class MyAnnotationFremeworkExplan {
 
-    public static void main(String[] args) throws InstantiationException, IllegalAccessException, InvocationTargetException {
+   /* public static void main(String[] args) throws InstantiationException, IllegalAccessException, InvocationTargetException {
         Class<classTest> classTestClass = classTest.class;
         classTest classTest = classTestClass.newInstance();
         Method[] methods = classTestClass.getMethods();
@@ -38,5 +39,5 @@ public class MyAnnotationFremeworkExplan {
             method.invoke(classTest);
         }
 
-    }
+    }*/
 }

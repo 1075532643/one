@@ -1,6 +1,8 @@
 package com.ag.annoationSt.annatation.annotationStudy;
 
 import com.ag.annoationSt.annatation.MyTest;
+import com.ag.annoationSt.annatation.annotationStudy.inter.afterTest;
+import com.ag.annoationSt.annatation.annotationStudy.inter.beforeTest;
 
 public class classTest {
 

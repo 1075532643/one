@@ -5,7 +5,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 public class alisforTest {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         Method[] methods = alisforTest.class.getMethods();
         for (Method method : methods) {
@@ -17,7 +17,7 @@ public class alisforTest {
                 System.out.println(annotation1);
             }
         }
-    }
+    }*/
 
     @aliasTestA(a1 = "这是a1测试")
     @aliasTestB("测试b类")
