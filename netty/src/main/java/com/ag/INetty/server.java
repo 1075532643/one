@@ -32,7 +32,7 @@ public class server {
                     });//给workerGroup的EventLoop对应的管道设置处理器
             System.out.println("服务端准备就绪。。。");
             //绑定端口号，启动服务端
-            ChannelFuture channelFuture = serverBootstrap.bind(9000).sync();
+            ChannelFuture channelFuture = serverBootstrap.bind(9001).sync();
             //对关闭通道进行监听
             channelFuture.channel().closeFuture().sync();
         } finally {

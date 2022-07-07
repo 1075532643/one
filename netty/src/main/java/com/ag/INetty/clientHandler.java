@@ -15,10 +15,9 @@ public class clientHandler  extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("发送消息到服务端");
         ByteBuf byteBuf = getByteBuf(ctx);
         //发送消息到服务端
-        System.out.println(byteBuf.toString(CharsetUtil.UTF_8));
+       System.out.println(byteBuf.toString(CharsetUtil.UTF_8));
         ctx.channel().writeAndFlush(byteBuf);
        // ctx.writeAndFlush(Unpooled.copiedBuffer("收到消息", CharsetUtil.UTF_8));
     }
@@ -27,7 +26,7 @@ public class clientHandler  extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;
 
-        System.out.println("收到服务端" + ctx.channel().remoteAddress() + "的消息：" + byteBuf.toString(CharsetUtil.UTF_8));
+        System.out.println("客户端channelRead方法收到服务端" + ctx.channel().remoteAddress() + "的消息：" + byteBuf.toString(CharsetUtil.UTF_8));
 
        // super.channelRead(ctx, msg);
     }

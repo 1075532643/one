@@ -26,7 +26,7 @@ public class client {
                         }
                     });
             System.out.println("客户端准备就绪");
-            ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 9000).sync();
+            ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 9001).sync();
             channelFuture.channel().closeFuture().sync();
         } finally {
             eventExecutors.shutdownGracefully();
