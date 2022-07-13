@@ -10,6 +10,9 @@ import javax.swing.*;
 
 public class serverHandler extends ChannelInboundHandlerAdapter {
 
+    /*ChannelHandlerContext ctx:上下文对象, 含有 管道pipeline , 通道channel, 地址
+    2. Object msg: 就是客户端发送的数据 默认Object
+    * */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf)msg;
@@ -19,6 +22,7 @@ public class serverHandler extends ChannelInboundHandlerAdapter {
        String response = "hello,这是服务器收到消息后传回的数据";
         ByteBuf buffer = ctx.alloc().buffer(4 * response.length());
         buffer.writeBytes(response.getBytes());
+        //把数据写到缓存并刷新
         ctx.writeAndFlush(buffer);
     }
 
