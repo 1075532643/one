@@ -27,7 +27,6 @@ public class RpcServerWorker implements Runnable{
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-
             // 1、Transfer层获取到RpcRequest消息【transfer层】
             RpcRequest rpcRequest = (RpcRequest) objectInputStream.readObject();
 

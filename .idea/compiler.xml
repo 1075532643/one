@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jvm" />
-        <module name="JavaProxy" />
-        <module name="stream_three" />
         <module name="xxl-job" />
         <module name="reds_distribute_lock" />
+        <module name="two" />
+        <module name="RPCkuangjia" />
+        <module name="es" />
+        <module name="JavaProxy" />
+        <module name="stream_three" />
         <module name="annotationDesc" />
         <module name="JUC" />
         <module name="applicationListen" />
-        <module name="two" />
-        <module name="RPCkuangjia" />
         <module name="netty" />
         <module name="aopT" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="annotationDesc" options="-parameters" />
       <module name="aopT" options="-parameters" />
       <module name="applicationListen" options="-parameters" />
+      <module name="es" options="-parameters" />
       <module name="jvm" options="-parameters" />
       <module name="netty" options="-parameters" />
       <module name="reds_distribute_lock" options="-parameters" />

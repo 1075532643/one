@@ -16,6 +16,7 @@ public class testClient {
         String msg = helloResponse.getMsg();
         System.out.println(msg);
 
+
 /*
         com.testRPCCodeing.IDL.helloResponse hi = service.hi(cyg);
         System.out.println(hi.getMsg());*/
