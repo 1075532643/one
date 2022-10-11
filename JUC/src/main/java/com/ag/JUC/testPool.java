@@ -9,6 +9,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -17,11 +18,13 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j(topic = "c.test")
 public class testPool {
     public static void main(String[] args) {
+
         threadPool threadPool = new threadPool(2, 1000, TimeUnit.MILLISECONDS, 10, (queue, task)->{
            //死等
             queue.put(task);
 
         });
+
         for(int i =0;i<15;i++){
             int j =i;
             threadPool.execute(()->{
@@ -85,6 +88,7 @@ class threadPool{
             }
         }
     }
+
 
     public void execute(Runnable runnable) {
         //当任务数没有超过coreSize时，交给work对象执行
