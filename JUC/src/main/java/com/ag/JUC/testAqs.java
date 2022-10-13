@@ -46,7 +46,7 @@ public class testAqs {
 class MyLock implements Lock{
 
     private MySync mySync =new MySync();
-    //独占锁，同步器类
+    //同步器类
     class MySync extends AbstractQueuedSynchronizer{
         @Override
         protected boolean tryAcquire(int arg) {
@@ -61,7 +61,7 @@ class MyLock implements Lock{
         @Override
         protected boolean tryRelease(int arg) {
             setExclusiveOwnerThread(null);
-            //state是volite的，字段前面的指令不会重排序。保持可见
+            //state是volaite的，字段前面的指令不会重排序。保持可见
             setState(0);
             return true;
         }

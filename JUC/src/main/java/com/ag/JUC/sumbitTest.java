@@ -11,6 +11,7 @@ public class sumbitTest {
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
+
         List<Future<String>> futures = executorService.invokeAll(Arrays.asList(
                 () -> {
                     log.debug("begin");
