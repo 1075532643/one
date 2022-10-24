@@ -13,8 +13,10 @@
         <module name="two" />
         <module name="RPCkuangjia" />
         <module name="es" />
+        <module name="redis-cache" />
         <module name="JavaProxy" />
         <module name="stream_three" />
+        <module name="kafka" />
         <module name="annotationDesc" />
         <module name="JUC" />
         <module name="applicationListen" />
@@ -36,7 +38,9 @@
       <module name="applicationListen" options="-parameters" />
       <module name="es" options="-parameters" />
       <module name="jvm" options="-parameters" />
+      <module name="kafka" options="-parameters" />
       <module name="netty" options="-parameters" />
+      <module name="redis-cache" options="-parameters" />
       <module name="reds_distribute_lock" options="-parameters" />
       <module name="stream_three" options="-parameters" />
       <module name="two" options="-parameters" />

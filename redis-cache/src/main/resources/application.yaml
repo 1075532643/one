@@ -1,0 +1,24 @@
+server:
+  port: 81
+spring:
+  datasource:
+    druid:
+      #sst
+      url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+      username: root
+      password: qq2022
+      driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-idle: 8
+        max-wait: 100
+logging:
+  file:
+    name: logs/xxx.log
+  level:
+    org.springframework.boot: error
