@@ -9,16 +9,16 @@ import java.util.Arrays;
 public class JdkDynamicProxyTest {
     public static void main(String[] args) {
         System.out.println("第一种动态代理");
-        enginerPerson enginerPerson = new enginerPerson("villi");
+        enginerPerson enginerPerson = new enginerPerson("陈永光");
         InvocationHandler handler = new PersonInvocationHandler<>(enginerPerson);
         person personProxy = (person)Proxy.newProxyInstance(person.class.getClassLoader(), new Class<?>[]{person.class}, handler);
-        System.out.println("package = " + personProxy.getClass().getPackage()
-                + " SimpleName = " + personProxy.getClass().getSimpleName()
-                + " name =" +
-                personProxy.getClass().getName() + " CanonicalName = " +                ""
+       /* System.out.println("package = " + personProxy.getClass().getPackage()
+                + "\n SimpleName = " + personProxy.getClass().getSimpleName()
+                + "\n name =" +
+                personProxy.getClass().getName() + "\n CanonicalName = " +                ""
                 + personProxy.getClass().getCanonicalName() + " 实现的接口 Interfaces = "
                 + Arrays.toString(personProxy.getClass().getInterfaces()) +                " superClass = " + personProxy.getClass().getSuperclass() + " methods =" + Arrays.toString(personProxy.getClass().getMethods()));        // 通过 代理类 执行 委托类的代码逻辑
-
+*/
         System.out.println("--分割--");
         personProxy.say("say方法动态代理测试");
 

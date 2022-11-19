@@ -2,14 +2,12 @@ server:
   port: 81
 spring:
   datasource:
-    druid:
-      #sst
-      url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
-      username: root
-      password: qq2022
-      driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/redis_cache?useSSL=false
+    username: root
+    password: qq20225415
+    driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
     lettuce:
       pool:
@@ -22,3 +20,5 @@ logging:
     name: logs/xxx.log
   level:
     org.springframework.boot: error
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity # 别名扫描包

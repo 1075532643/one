@@ -16,6 +16,7 @@
         <module name="redis-cache" />
         <module name="JavaProxy" />
         <module name="stream_three" />
+        <module name="NIO" />
         <module name="kafka" />
         <module name="annotationDesc" />
         <module name="JUC" />
@@ -32,6 +33,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JUC" options="-parameters" />
       <module name="JavaProxy" options="-parameters" />
+      <module name="NIO" options="-parameters" />
       <module name="RPCkuangjia" options="-parameters" />
       <module name="annotationDesc" options="-parameters" />
       <module name="aopT" options="-parameters" />

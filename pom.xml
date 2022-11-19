@@ -28,7 +28,8 @@
         <module>reds_distribute_lock</module>
         <module>es</module>
         <module>kafka</module>
-       <!-- <module>redis-cache</module>-->
+        <module>NIO</module>
+        <!-- <module>redis-cache</module>-->
     </modules>
 
 
@@ -38,10 +39,10 @@
     </properties>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
@@ -66,7 +67,7 @@
             <artifactId>kafka-clients</artifactId>
         </dependency>
 
-     <!--   <dependency>
+        <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version> 2.9.0</version>
@@ -76,7 +77,7 @@
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
             <version>3.15.5</version>
-        </dependency>-->
+        </dependency>
 
 
 

@@ -3,6 +3,7 @@ package com.hmdp;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.hmdp.entity.Shop;
+import com.hmdp.service.impl.ShopServiceImpl;
 import com.hmdp.utils.RedisConstants;
 import com.hmdp.utils.RedisIdWorker;
 
@@ -11,12 +12,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.concurrent.*;
 
 @SpringBootTest
@@ -25,14 +30,22 @@ class redisTemplateTesst {
     @Autowired
     private StringRedisTemplate redisTemplate;
 
-   /* @Resource
+    @Resource
     private ShopServiceImpl shopService;
-*/
     @Autowired
     private RedisIdWorker redisIdWorker;
 
 
     private ExecutorService executorService = Executors.newFixedThreadPool(500);
+
+    private static  final DefaultRedisScript<Long> unlock_script;
+
+    static  {
+        unlock_script = new DefaultRedisScript<>();
+        unlock_script.setLocation(new ClassPathResource("unlock.lua"));
+        unlock_script.setResultType(Long.class);
+
+    }
 
     @Test
     void testString() throws InterruptedException {
@@ -113,6 +126,8 @@ class redisTemplateTesst {
     }
 
     private void unlock(String key) {
-        redisTemplate.delete(key);
+        redisTemplate.execute(unlock_script, Collections.singletonList("key"),"value");
+
+       // redisTemplate.delete(key);
     }
 }
