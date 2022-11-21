@@ -29,6 +29,7 @@
         <module>es</module>
         <module>kafka</module>
         <module>NIO</module>
+        <module>NowCoder</module>
         <!-- <module>redis-cache</module>-->
     </modules>
 

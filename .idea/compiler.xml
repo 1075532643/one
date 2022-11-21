@@ -10,6 +10,7 @@
         <module name="jvm" />
         <module name="xxl-job" />
         <module name="reds_distribute_lock" />
+        <module name="NowCoder" />
         <module name="two" />
         <module name="RPCkuangjia" />
         <module name="es" />
@@ -34,6 +35,7 @@
       <module name="JUC" options="-parameters" />
       <module name="JavaProxy" options="-parameters" />
       <module name="NIO" options="-parameters" />
+      <module name="NowCoder" options="-parameters" />
       <module name="RPCkuangjia" options="-parameters" />
       <module name="annotationDesc" options="-parameters" />
       <module name="aopT" options="-parameters" />
