@@ -1,5 +1,8 @@
 package com.ag.one;
 
+import com.ag.pojo.Edge;
+import org.hibernate.validator.cfg.defs.MinDef;
+
 import java.util.*;
 
 //堆
@@ -55,12 +58,12 @@ public class code2 {
         for (; index <= Math.min(arr.length, k); index++) {
             heap.add(arr[index]);
         }
-        int i =0;
-        for (;  i < arr.length ; i++) {
+        int i = 0;
+        for (; i < arr.length; i++) {
             heap.add(arr[index]);
             arr[i] = heap.poll();
         }
-        while (!heap.isEmpty()){
+        while (!heap.isEmpty()) {
             arr[i++] = heap.poll();
         }
     }
@@ -86,7 +89,8 @@ public class code2 {
         }
 
     }
-    public static class AComp implements Comparator<Integer>{
+
+    public static class AComp implements Comparator<Integer> {
 
         //返回负数，认为第一个参数在上面
         //返回正数，认为第二个参数在上面
@@ -96,37 +100,41 @@ public class code2 {
             return o2 - o1;
         }
     }
+
     //单链表的节点
-    public static class Node{
+    public static class Node {
         public int value;
         public Node next;
 
-        public Node(int data){
+        public Node(int data) {
             this.value = data;
         }
     }
 
     //判断一个链表是不是回文链表
-    public static boolean isPalindrome(Node head){
+    public static boolean isPalindrome(Node head) {
         Stack<Node> stack = new Stack<>();
         Node cur = head;
-        while (cur != null){
+        while (cur != null) {
             stack.push(cur);
-              cur= cur.next;
+            cur = cur.next;
         }
-        while (head != null){
-            if(head.value != stack.pop().value){
+        while (head != null) {
+            if (head.value != stack.pop().value) {
                 return false;
             }
-            head =  head.next;
+            head = head.next;
         }
         return true;
 
 
     }
-    //找到链表第一个入环节点
-    //从头开始，快慢指针。第一次相遇时，快指针回到开头，慢指针不动，然后快指针和慢指针都
-    //以一次一步往前走，再次相遇时就是入环节点
+
+    /**
+     * 找到链表第一个入环节点
+     * 从头开始，快慢指针。第一次相遇时，快指针回到开头，慢指针不动，然后快指针和慢指针都
+     * 以一次一步往前走，再次相遇时就是入环节点
+     */
     public static Node getLoopNode(Node node) {
         if (node == null || node.next == null || node.next.next == null) {
             return null;
@@ -143,10 +151,15 @@ public class code2 {
 
         }
         n2 = node;
-        while (n1 != n2){
-           n1 =  n1.next;
-           n2 =  n2.next;
+        while (n1 != n2) {
+            n1 = n1.next;
+            n2 = n2.next;
         }
         return n1;
     }
+
+
+
+
+
 }
