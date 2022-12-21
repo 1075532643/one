@@ -1,6 +1,8 @@
 package com.ag.one;
 
+import com.ag.pojo.Node;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -281,5 +283,54 @@ public class code3 {
         System.out.println(down ? "凹" : "凸");
         printProcess(i + 1, n, false);
     }
+
+
+    /**
+     * 树型dp    ----提升
+     * 树形dp套路使用前提：
+     * 如果题目求解目标是S规则，则求解流程可以定成以每一个节点为头节点的子树在S规则下
+     * 的每一个答案，并且最终答案一定在其中
+     * <p>
+     * <p>
+     * 1. 叉树节点间的最大距离问题
+     * 从二叉树的节点a出发，可以向上或者向下走，但沿途的节点只能经过一次，到达节点b时路
+     * 径上的节点个数叫作a到b的距离，那么二叉树任何两个节点之间都有距离，求整棵树上的最
+     * 大距离。
+     */
+
+    @Data
+    @AllArgsConstructor
+    public static class InfoDates {
+        public int maxDistance;
+        public int height;
+
+    }
+
+    public static int maxDistance(TreeNode head) {
+        return Process(head).maxDistance;
+    }
+
+    /**
+     * 返回以node为头的整棵树信息
+     *
+     * @param node
+     * @return
+     */
+    public static InfoDates Process(TreeNode node) {
+        if (node == null) {
+            return new InfoDates(0, 0);
+        }
+        InfoDates left = Process(node.getLeftChild());
+        InfoDates right = Process(node.getRightChild());
+        int p1 = left.maxDistance;
+        int p2 = right.maxDistance;
+        int p3 = left.height + right.height;
+        int maxDistance = Math.max(p3, Math.max(p1, p2));
+        int height = Math.max(left.height, right.height);
+        return new InfoDates(maxDistance, height);
+
+
+    }
+
 
 }

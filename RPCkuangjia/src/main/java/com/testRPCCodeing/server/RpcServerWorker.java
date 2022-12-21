@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class RpcServerWorker implements Runnable{
+public class RpcServerWorker implements Runnable {
     private Socket socket;
     private HashMap<String, Object> registeredService;
 

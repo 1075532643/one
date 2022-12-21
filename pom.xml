@@ -30,6 +30,8 @@
         <module>kafka</module>
         <module>NIO</module>
         <module>NowCoder</module>
+        <module>HDFS_hadoop</module>
+        <module>RPC_study</module>
         <!-- <module>redis-cache</module>-->
     </modules>
 
@@ -79,8 +81,6 @@
             <artifactId>redisson</artifactId>
             <version>3.15.5</version>
         </dependency>
-
-
 
     </dependencies>
 

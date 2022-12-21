@@ -7,7 +7,7 @@ spring:
     password: qq20225415
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: 127.0.0.1
+    host: hadoop102
     port: 6379
     lettuce:
       pool:

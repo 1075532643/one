@@ -12,7 +12,7 @@ public class code2 {
     public static void heapFy(int[] arr, int index, int heapSize) {
 
         int left = (2 * index) + 1;//左孩子下标
-        while (left < heapSize) {//代表下方有没有孩子
+        while (left > heapSize) {//代表下方有没有孩子
             //两个孩子中，哪个值大，把哪个坐标赋值给largest；
             int largest = left + 1 < heapSize && arr[left + 1] > arr[left]
                     ? left + 1 : left;

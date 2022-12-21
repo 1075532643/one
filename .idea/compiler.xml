@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jvm" />
+        <module name="HDFS_hadoop" />
         <module name="xxl-job" />
         <module name="reds_distribute_lock" />
         <module name="NowCoder" />
@@ -22,6 +23,7 @@
         <module name="annotationDesc" />
         <module name="JUC" />
         <module name="applicationListen" />
+        <module name="RPC_study" />
         <module name="netty" />
         <module name="aopT" />
       </profile>
@@ -32,10 +34,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HDFS_hadoop" options="-parameters" />
       <module name="JUC" options="-parameters" />
       <module name="JavaProxy" options="-parameters" />
       <module name="NIO" options="-parameters" />
-      <module name="NowCoder" options="-parameters" />
+      <module name="NowCoder" options="-parameters --add-modules java.base" />
+      <module name="RPC_study" options="-parameters" />
       <module name="RPCkuangjia" options="-parameters" />
       <module name="annotationDesc" options="-parameters" />
       <module name="aopT" options="-parameters" />
